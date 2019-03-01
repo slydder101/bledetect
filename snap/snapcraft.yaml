@@ -1,0 +1,24 @@
+name: bledetect
+version: 4.2
+summary: bluetooth detect tool
+description: |
+  Bluetooth detection tool
+
+architectures:
+  - build-on: [x86_64, armhf]
+    run-on: [armhf, x86_64]
+
+parts:
+  bledetect:
+    plugin: make
+    source: src
+    build-packages:
+      - build-essential
+      - gcc
+      - make
+      - libbluetooth-dev
+    stage-packages:
+      - libbluetooth-dev
+apps:
+  bledetect-cli:
+    command: bledetect

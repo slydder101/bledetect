@@ -5,8 +5,8 @@ description: |
   Bluetooth detection tool
 
 architectures:
-  - build-on: [amd64, armhf]
-    run-on: [armhf, amd64]
+  - build-on: [armhf]
+    run-on: [armhf]
 
 parts:
   bledetect:

@@ -1,9 +1,10 @@
 name: bledetect101
-version: 4.3
+version: 4.5
 summary: bluetooth detect tool
 description: |
   Bluetooth detection tool
 
+grade: stable
 architectures:
   - build-on: [armhf]
     run-on: [armhf]
@@ -22,3 +23,4 @@ parts:
 apps:
   bledetect-cli:
     command: bledetect
+    plugs: &plugs [network, network-control, bluetooth-control]
